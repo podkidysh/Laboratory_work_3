@@ -1,0 +1,110 @@
+﻿<Window x:Class="Laboratory_work_3.Forms.ComputerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Laboratory_work_3.Forms"
+        mc:Ignorable="d"
+        Title="ComputerWindow" Height="450" Width="800"
+        Background="Black">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Column="0" Grid.Row="0">
+            <StackPanel Margin="5">
+                <Button x:Name="btExit" Click="btExit_Click" Background="Orange">Выйти</Button>
+            </StackPanel>
+        </Grid>
+        <Grid x:Name="gridComputerInfo" Grid.Column="0" Grid.Row="1">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            
+            <Grid Grid.Column="0" Grid.Row="1">
+                <StackPanel Background="Orange" Margin="20">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Процессор:" Margin="5"></TextBlock>
+                        <TextBlock Margin="5" Text="{Binding Processor}"></TextBlock>
+                        <TextBlock Text="lvl" Margin="5"></TextBlock>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Видеокарта:" Margin="5"></TextBlock>
+                        <TextBlock Margin="5" Text="{Binding VideoCard}"></TextBlock>
+                        <TextBlock Text="lvl" Margin="5"></TextBlock>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Оперативка:" Margin="5"></TextBlock>
+                        <TextBlock Margin="5" Text="{Binding RamMemory}"></TextBlock>
+                        <TextBlock Text="lvl" Margin="5"></TextBlock>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="SSD:" Margin="5"></TextBlock>
+                        <TextBlock Margin="5" Text="{Binding SSD}"></TextBlock>
+                        <TextBlock Text="lvl" Margin="5"></TextBlock>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Охлаждение:" Margin="5"></TextBlock>
+                        <TextBlock Margin="5" Text="{Binding Cooling}"></TextBlock>
+                        <TextBlock Text="lvl" Margin="5"></TextBlock>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Материнская плата:" Margin="5"></TextBlock>
+                        <TextBlock Margin="5" Text="{Binding Motherboard}"></TextBlock>
+                        <TextBlock Text="lvl" Margin="5"></TextBlock>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Блок питания:" Margin="5"></TextBlock>
+                        <TextBlock Margin="5" Text="{Binding PowerSupply}"></TextBlock>
+                        <TextBlock Text="lvl" Margin="5"></TextBlock>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Корпус:" Margin="5"></TextBlock>
+                        <TextBlock Margin="5" Text="{Binding Body}"></TextBlock>
+                        <TextBlock Text="lvl" Margin="5"></TextBlock>
+                    </StackPanel>
+                </StackPanel>
+                
+            </Grid>
+
+            <Grid Grid.Column="1" Grid.Row="1">
+
+                <StackPanel Margin="16">
+                    <Button x:Name="btUpgrade1" Click="btUpgrade1_Click">Улучшить процессор</Button>
+                    <Button x:Name="btUpgrade2" Click="btUpgrade2_Click">Улучшить видеокарту</Button>
+                    <Button x:Name="btUpgrade3" Click="btUpgrade3_Click">Улучшить оперативку</Button>
+                    <Button x:Name="btUpgrade4" Click="btUpgrade4_Click">Улучшить SSD</Button>
+                    <Button x:Name="btUpgrade5" Click="btUpgrade5_Click">Улучшить охлаждение</Button>
+                    <Button x:Name="btUpgrade6" Click="btUpgrade6_Click">Улучшить мат. плату</Button>
+                    <Button x:Name="btUpgrade7" Click="btUpgrade7_Click">Улучшить блок питания</Button>
+                    <Button x:Name="btUpgrade8" Click="btUpgrade8_Click">Улучшить корпус</Button>
+                </StackPanel>
+
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="2">
+            <StackPanel VerticalAlignment="Center">
+                <Button x:Name="btCreateWebSite" Click="btCreateWebSite_Click">Разрабатывать web-сайт</Button>
+                <Button x:Name="btCreateGame" Click="btCreateGame_Click">Разрабатывать игру</Button>
+                <Button x:Name="btCreateMobileApp" Click="btCreateMobileApp_Click">Разрабатывать мобильное приложение</Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

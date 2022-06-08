@@ -1,0 +1,28 @@
+﻿<Window x:Class="Laboratory_work_3.Forms.RunGameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Laboratory_work_3.Forms"
+        mc:Ignorable="d"
+        Title="RunGameWindow" Height="450" Width="800"
+        Background="Black">
+    <Grid>
+        <ScrollViewer>
+            <StackPanel Margin="16">
+                <DataGrid Margin="5" Background="Orange" MinHeight="100" Name="dgListGame">
+                    <DataGrid.Columns>
+                       <DataGridTextColumn Header="id" Binding="{Binding GamerId}" />
+                       <DataGridTextColumn Header="Имя" Binding="{Binding Name}" />
+                       <DataGridTextColumn Header="Возраст" Binding="{Binding Age}" />
+                        <DataGridTextColumn Header="Пол" Binding="{Binding Gender}" />
+                        <DataGridTextColumn Header="Сытость" Binding="{Binding Satiety}" />
+                        <DataGridTextColumn Header="Усталость" Binding="{Binding Fatigue}" />
+                        <DataGridTextColumn Header="Деньги" Binding="{Binding Money}" />
+                    </DataGrid.Columns>
+                </DataGrid>
+                <Button x:Name="btRunGame" Click="btRunGame_Click" Margin="5" Background="Orange">Загрузить игру</Button>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>
